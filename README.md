@@ -10,4 +10,6 @@ For exapmle:
 - bed stats
 - armor stats
 
+Each type of information can be disabled in mod options.
+
 ![Example](https://user-images.githubusercontent.com/34233184/116244734-e24ffa00-a770-11eb-9bb3-719764c4b32c.png)
