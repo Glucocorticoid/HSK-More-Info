@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<HMI_showTextileInfo>Textile stats</HMI_showTextileInfo>
+	<HMI_showTextileInfo_ToolTip>Enables/disables stats of the selected fabric or leather for building beds. </HMI_showTextileInfo_ToolTip>
+
+	<HMI_showApparelArmorStats>Armor stats</HMI_showApparelArmorStats>
+	<HMI_showApparelArmorStats_ToolTip>Enables/disables stats of the selected armor against sharp and blunt damage. </HMI_showApparelArmorStats_ToolTip>
+
+	<HMI_showWorkTableSpeedFactor>Worktable speed</HMI_showWorkTableSpeedFactor>
+	<HMI_showWorkTableSpeedFactor_ToolTip>Enables/disables a speed factor of the selected workbench.</HMI_showWorkTableSpeedFactor_ToolTip>
+
+	<HMI_showBedStats>Bed stats</HMI_showBedStats>
+	<HMI_showBedStats_ToolTip>Enables/disables stats of the selected bed.</HMI_showBedStats_ToolTip>
+
+	<HMI_showColonistSuppression>Colonist supperssion</HMI_showColonistSuppression>
+	<HMI_showColonistSuppression_ToolTip>Enables/disables colonist supperssion stats. May not work, if suppression is disabled in CombatExtended mod options.</HMI_showColonistSuppression_ToolTip>
+
+	<HMI_ResetButton>Reset</HMI_ResetButton>
+    
+</LanguageData>
