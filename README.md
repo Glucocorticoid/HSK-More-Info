@@ -1,4 +1,4 @@
-# HSK-More-Info
+# HSK More Info
 
 RimWorld quality of life game mod. 
 Provides most frequency needed information about selected pawns and things.
