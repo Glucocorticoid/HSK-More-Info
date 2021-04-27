@@ -31,5 +31,5 @@
 		<li>CETeam.CombatExtended</li>
 	</loadAfter>
 
-	<description>Quality of life mod to provide more information about colony items, buildings and pawns.</description>
+	<description>Quality of life mod to provide more information about colony items, buildings and pawns. Also provides some useful debug buttons in developer menu.</description>
 </ModMetaData>
