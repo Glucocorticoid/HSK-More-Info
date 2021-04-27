@@ -16,6 +16,6 @@ Each type of information can be disabled in mod options.
 
 # Debug tools
 
-Added additional debug buttons in Dev Menu
+Added extra debug buttons in Dev Menu
 
 ![Preview2](https://user-images.githubusercontent.com/34233184/116262661-66aa7900-a781-11eb-995d-cffd2010069c.png)
