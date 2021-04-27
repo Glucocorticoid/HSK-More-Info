@@ -16,6 +16,9 @@
 	<HMI_showColonistSuppression>Подавление колониста</HMI_showColonistSuppression>
 	<HMI_showColonistSuppression_ToolTip>Включает/отключает отобращение показателей подавления выбранного колониста. Может не работать, если отключена опция подавления в настройках мода CombatExtended.</HMI_showColonistSuppression_ToolTip>
 
+	<HMI_showEnemySuppression>[Нечестно] Подавление врагов</HMI_showEnemySuppression>
+	<HMI_showEnemySuppression_ToolTip>Включает/отключает отобращение показателей подавления выбранной вражеской пешки. Может не работать, если отключена опция подавления в настройках мода CombatExtended.</HMI_showEnemySuppression_ToolTip>
+
 	<HMI_ResetButton>Сброс</HMI_ResetButton>
     
 </LanguageData>
