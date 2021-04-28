@@ -21,11 +21,11 @@
 			<downloadUrl>https://github.com/CombatExtended-Continued/CombatExtended</downloadUrl>
 		</li>
 	</modDependencies>
-
+<!--
 	<incompatibleWith>
 		<li>Jaxe.RimHUD</li>
 	</incompatibleWith>
-
+-->
 	<loadAfter>
 		<li>brrainz.harmony</li>
 		<li>CETeam.CombatExtended</li>

@@ -13,6 +13,9 @@
 	<HMI_showBedStats>Bed stats</HMI_showBedStats>
 	<HMI_showBedStats_ToolTip>Enables/disables stats of the selected bed.</HMI_showBedStats_ToolTip>
 
+	<HMI_showLoadedAmmoStats>Loaded ammo stats</HMI_showLoadedAmmoStats>
+	<HMI_showLoadedAmmoStats_ToolTip>Enables/disables stats of the loaded ammo in guns and turrets.</HMI_showLoadedAmmoStats_ToolTip>
+
 	<HMI_showColonistSuppression>Colonist supperssion</HMI_showColonistSuppression>
 	<HMI_showColonistSuppression_ToolTip>Enables/disables colonist supperssion stats. May not work, if suppression is disabled in CombatExtended mod options.</HMI_showColonistSuppression_ToolTip>
 	
