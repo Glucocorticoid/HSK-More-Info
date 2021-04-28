@@ -13,8 +13,11 @@
 	<HMI_showBedStats>Характеристики кровати</HMI_showBedStats>
 	<HMI_showBedStats_ToolTip>Включает/отключает отображение параметров выбранной кровати.</HMI_showBedStats_ToolTip>
 
-	<HMI_showLoadedAmmoStats>Характеристики зарященных в оружие патронов</HMI_showLoadedAmmoStats>
-	<HMI_showLoadedAmmoStats_ToolTip>Включает/отключает отображение характеристик зарященных в оружие патронов или заряженных в туррель снарядов.</HMI_showLoadedAmmoStats_ToolTip>
+	<HMI_showAmmoStats>Характеристики боеприпасов</HMI_showAmmoStats>
+	<HMI_showAmmoStats_ToolTip>Включает/отключает отображение характеристик патронов или снарядов.</HMI_showAmmoStats_ToolTip>
+
+	<HMI_showLoadedAmmoStats>Характеристики боеприпасов в оружии</HMI_showLoadedAmmoStats>
+	<HMI_showLoadedAmmoStats_ToolTip>Включает/отключает отображение характеристик заряженных в оружие патронов или заряженных в туррель снарядов.</HMI_showLoadedAmmoStats_ToolTip>
 
 	<HMI_showColonistSuppression>Подавление колониста</HMI_showColonistSuppression>
 	<HMI_showColonistSuppression_ToolTip>Включает/отключает отобращение показателей подавления выбранного колониста. Может не работать, если отключена опция подавления в настройках мода CombatExtended.</HMI_showColonistSuppression_ToolTip>
