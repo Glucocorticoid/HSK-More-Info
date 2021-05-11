@@ -22,6 +22,9 @@
 	<HMI_showColonistSuppression>Colonist supperssion</HMI_showColonistSuppression>
 	<HMI_showColonistSuppression_ToolTip>Enables/disables colonist supperssion stats. May not work, if suppression is disabled in CombatExtended mod options.</HMI_showColonistSuppression_ToolTip>
 	
+	<HMI_showColonistSuppressionNeeds>Colonist supperssion (needs)</HMI_showColonistSuppressionNeeds>
+	<HMI_showColonistSuppressionNeeds_ToolTip>Enables/disables colonist supperssion bar in pawn needs tab. May not work, if suppression is disabled in CombatExtended mod options.</HMI_showColonistSuppressionNeeds_ToolTip>
+
 	<HMI_showEnemySuppression>[Unfair] Enemy suppression</HMI_showEnemySuppression>
 	<HMI_showEnemySuppression_ToolTip>Enables/disables enemy supperssion stats. May not work, if suppression is disabled in CombatExtended mod options.</HMI_showEnemySuppression_ToolTip>
 
