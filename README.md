@@ -5,6 +5,7 @@ Provides most frequency needed information about selected pawns and things.
 
 For exapmle:
 - pawn suppressability
+- pawn suppressability (needs bar)
 - textile stats
 - workbench stats
 - bed stats
