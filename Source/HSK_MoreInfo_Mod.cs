@@ -69,6 +69,7 @@ public class MoreInfo_Settings : ModSettings
         public static bool showLoadedAmmoStats = true;
         public static bool showColonistSuppression = true;
         public static bool showColonistSuppressionNeeds = true;
+        public static bool tinyNeedsSupperssionBar = false;
         public static bool showEnemySuppression = false;
 
         public override void ExposeData()
@@ -81,6 +82,7 @@ public class MoreInfo_Settings : ModSettings
             Scribe_Values.Look(ref showLoadedAmmoStats, "showLoadedAmmoStats", true);
             Scribe_Values.Look(ref showColonistSuppression, "showColonistSuppression", true);
             Scribe_Values.Look(ref showColonistSuppressionNeeds, "showColonistSuppressionNeeds", true);
+            Scribe_Values.Look(ref tinyNeedsSupperssionBar, "tinyNeedsBar", false);
             Scribe_Values.Look(ref showEnemySuppression, "showEnemySuppression", false);
 
             base.ExposeData();
@@ -116,6 +118,9 @@ public class MoreInfo_Settings : ModSettings
             listingStandard.CheckboxLabeled("HMI_showColonistSuppressionNeeds".Translate(), ref showColonistSuppressionNeeds, "HMI_showColonistSuppressionNeeds_ToolTip".Translate());
             listingStandard.Gap(10f);
 
+            listingStandard.CheckboxLabeled("HMI_tinyNeedsSupperssionBar".Translate(), ref tinyNeedsSupperssionBar, "HMI_tinyNeedsSupperssionBar_ToolTip".Translate());
+            listingStandard.Gap(10f);
+
             listingStandard.CheckboxLabeled("HMI_showEnemySuppression".Translate(), ref showEnemySuppression, "HMI_showEnemySuppression_ToolTip".Translate());
             listingStandard.Gap(10f);
             
@@ -132,6 +137,7 @@ public class MoreInfo_Settings : ModSettings
                 MoreInfo_Settings.showLoadedAmmoStats = true;
                 MoreInfo_Settings.showColonistSuppression = true;
                 MoreInfo_Settings.showColonistSuppressionNeeds = true;
+                MoreInfo_Settings.tinyNeedsSupperssionBar = false;
                 MoreInfo_Settings.showEnemySuppression = false;
             }
             listingStandard.Gap(10f);

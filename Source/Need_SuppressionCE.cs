@@ -89,7 +89,7 @@ namespace MoreInfo
 
         public override void NeedInterval()
 		{
-			
+            this.def.major = !MoreInfo_Settings.tinyNeedsSupperssionBar;
 		}
     }
 }
