@@ -71,6 +71,7 @@ public class MoreInfo_Settings : ModSettings
         public static bool showColonistSuppressionNeeds = true;
         public static bool tinyNeedsSupperssionBar = false;
         public static bool showEnemySuppression = false;
+        public static bool showMovingSpeed = true;
 
         public override void ExposeData()
         {
@@ -84,6 +85,7 @@ public class MoreInfo_Settings : ModSettings
             Scribe_Values.Look(ref showColonistSuppressionNeeds, "showColonistSuppressionNeeds", true);
             Scribe_Values.Look(ref tinyNeedsSupperssionBar, "tinyNeedsBar", false);
             Scribe_Values.Look(ref showEnemySuppression, "showEnemySuppression", false);
+            Scribe_Values.Look(ref showMovingSpeed, "showMovingSpeed", true);
 
             base.ExposeData();
         }
@@ -123,6 +125,9 @@ public class MoreInfo_Settings : ModSettings
 
             listingStandard.CheckboxLabeled("HMI_showEnemySuppression".Translate(), ref showEnemySuppression, "HMI_showEnemySuppression_ToolTip".Translate());
             listingStandard.Gap(10f);
+
+            listingStandard.CheckboxLabeled("HMI_showMovingSpeed".Translate(), ref showMovingSpeed, "HMI_showMovingSpeed_ToolTip".Translate());
+            listingStandard.Gap(10f);
             
             Rect reset = listingStandard.GetRect(Text.LineHeight);
             reset.width /= 4f;
@@ -139,6 +144,7 @@ public class MoreInfo_Settings : ModSettings
                 MoreInfo_Settings.showColonistSuppressionNeeds = true;
                 MoreInfo_Settings.tinyNeedsSupperssionBar = false;
                 MoreInfo_Settings.showEnemySuppression = false;
+                MoreInfo_Settings.showMovingSpeed = true;
             }
             listingStandard.Gap(10f);
             listingStandard.End();

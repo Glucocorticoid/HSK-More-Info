@@ -3,6 +3,7 @@ using System;
 using System.Text;
 using Verse.AI.Group;
 using System.Linq;
+using UnityEngine;
 
 namespace MoreInfo
 {
@@ -73,6 +74,26 @@ namespace MoreInfo
 			Log.Message(report.ToString());
             Find.WindowStack.Add(new Dialog_MessageBox(report.ToString()));
 		}
+
+        //Show Storyteller detailed info 
+        [DebugAction("HSK Debug", "Storyteller Info", actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        private static void StorytellerFix_GetDebugInfo()
+        {
+            var reporter = new StringBuilder();
+            reporter.AppendInNewLine($"Storyteller: {Find.Storyteller.def.label} \n");
+            reporter.AppendInNewLine($"Difficulty: {Find.Storyteller.difficulty.label} \n");
+            var comps = Find.Storyteller.storytellerComps;
+            reporter.AppendInNewLine($"Teller has {comps.Count} comps: \n");
+            foreach (var comp in comps)
+            {
+                reporter.AppendInNewLine($"{comp.ToString()}");
+                reporter.AppendInNewLine($"{comp.ToStringDeep(" - ")}");
+                reporter.AppendInNewLine($"{comp.props.ToStringDeep("\t")}");
+            }
+            reporter.AppendInNewLine($"\n Teller basic debug info: \n {Find.Storyteller.DebugString()}");
+            reporter.AppendInNewLine($"Time is: {Time.frameCount} \n");
+            Find.WindowStack.Add(new Dialog_MessageBox(reporter.ToString()));
+        }
 
         //Show Storyteller events Queue 
         [DebugAction("HSK Debug", "Show Event Queue", actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.PlayingOnMap)]
