@@ -26,16 +26,18 @@ namespace MoreInfo
                         StringBuilder stringBuilder = new StringBuilder();
                         stringBuilder.Append(__result);
 
-                        var suppresab = __instance.GetStatValue(CE_StatDefOf.Suppressability);
-                        var suppresabText = string.Format("{0}: {1:P0}", "MWI_Pawn_suppressability".Translate(), suppresab);
-                        stringBuilder.AppendInNewLine(suppresabText);
+                        var supAmount = string.Format("{0}: {1:0}", "MWI_Accumulated_suppression_amount".Translate(), compSuppressable.CurrentSuppression);
+                        stringBuilder.AppendInNewLine(supAmount);
+                        if (compSuppressable.isSuppressed)
+                            stringBuilder.Append(string.Format("({0})", "MWI_Suppressed".Translate().ToString()));
 
                         var thresh = MoreInfo_Utils.GetSuppressionThreshold(__instance);
                         var supThresh = string.Format("{0}: {1:0.00}", "MWI_Suppression_threshold".Translate(), thresh);
                         stringBuilder.AppendInNewLine(supThresh);
 
-                        var supAmount = string.Format("{0}: {1:0}", "MWI_Accumulated_suppression_amount".Translate(), compSuppressable.CurrentSuppression);
-                        stringBuilder.AppendInNewLine(supAmount);
+                        var suppresab = __instance.GetStatValue(CE_StatDefOf.Suppressability);
+                        var suppresabText = string.Format("{0}: {1:P0}", "MWI_Pawn_suppressability".Translate(), suppresab);
+                        stringBuilder.AppendInNewLine(suppresabText);
 
                         __result = stringBuilder.ToString().TrimEndNewlines();
                     } 
