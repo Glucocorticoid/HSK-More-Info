@@ -13,7 +13,7 @@ namespace MoreInfo
     {
         static void Postfix (ThingWithComps __instance, ref string __result)
         {
-            if (__instance != null && __instance.def != null)
+            if (__instance != null && __instance.def != null && !__instance.def.GetType().ToString().Contains("UniversalFermenter"))
             {
                 StringBuilder builder = new StringBuilder();
                 builder.Append(__result);
