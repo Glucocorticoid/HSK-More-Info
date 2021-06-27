@@ -19,11 +19,11 @@ namespace MoreInfo
                 builder.Append(__result);
                 if (MoreInfo_Settings.showTextileInfo && __instance.def.IsTextiles())
                     {
-                        var immuneMod = __instance?.def?.stuffProps?.statFactors?.Where(stat => stat.stat.defName == "ImmunityGainSpeedFactor").First();
+                        var immuneMod = __instance?.def?.stuffProps?.statFactors?.Where(stat => stat.stat.defName == "ImmunityGainSpeedFactor").FirstOrDefault();
                         if (immuneMod != null)
                                 builder.AppendInNewLine(GetFormattedString(immuneMod));
 
-                        var restMod = __instance?.def?.stuffProps?.statFactors?.Where(stat => stat.stat.defName == "BedRestEffectiveness").First();
+                        var restMod = __instance?.def?.stuffProps?.statFactors?.Where(stat => stat.stat.defName == "BedRestEffectiveness").FirstOrDefault();
                         if (restMod != null)
                                 builder.AppendInNewLine(GetFormattedString(restMod));
                     }
