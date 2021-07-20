@@ -4,6 +4,10 @@ using System.Text;
 using Verse.AI.Group;
 using System.Linq;
 using UnityEngine;
+using System.Reflection;
+using System.Collections.Generic;
+using System.Collections;
+using HarmonyLib;
 
 namespace MoreInfo
 {
@@ -198,6 +202,67 @@ namespace MoreInfo
                                 thing.GetType().ToString())));
                 }
             }
+        }
+
+        [DebugAction("HSK Debug", "Show NPS cell data", actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        private static void ShowNPSCellData()
+        {
+            var report = new StringBuilder();
+            var npsModID ="skyarkhangel.NPS";
+            if (ModsConfig.IsActive(npsModID))
+            {
+                var cellPoint = UI.MouseCell();
+                if (cellPoint.InBounds(Find.CurrentMap))
+                {
+                    var watcherTypeName = "NPS.Watcher";
+                    var watcherType = AccessTools.TypeByName(watcherTypeName);
+                    if (watcherType != null)
+                    {
+                        var component = Find.CurrentMap.GetComponent(watcherType);
+                        if (component != null)
+                        {
+                            var cellDataTypeName = "NPS.cellData";
+                            var cellDataType = AccessTools.TypeByName(cellDataTypeName);
+                            if (cellDataType != null)
+                            {
+                                var cellsDataFiled = watcherType.GetField("cellWeatherAffects", BindingFlags.Public | BindingFlags.Instance);
+                                var cells = cellsDataFiled.GetValue(component);
+                                if (cells != null && cells is IDictionary dict)
+                                {
+                                    var cellData = dict[cellPoint];
+                                    if (cellData != null)
+                                    {
+                                        report.AppendInNewLine($"NPS Watcher cell data:\n");
+                                        var terrainDef = cellData.GetType().GetProperty("currentTerrain");
+                                        report.AppendInNewLine($"{terrainDef.Name} = {terrainDef.GetValue(cellData).ToString()}");
+                                        var fileds = cellData.GetType().GetFields();
+                                        foreach (var fi in fileds)
+                                        {
+                                            report.AppendInNewLine($"{fi.Name} = {fi.GetValue(cellData).ToString()}");
+                                        }
+                                    }
+                                    else
+                                        report.AppendInNewLine($"cellData is empty or null");
+                                }
+                                else
+                                    report.AppendInNewLine($"Cannot access to cells dictionary");
+                            }
+                            else
+                                report.AppendInNewLine($"Cannot find type {cellDataTypeName}");
+                        }
+                        else
+                            report.AppendInNewLine($"Current map does not contain Watcher map component");
+                    }
+                    else
+                        report.AppendInNewLine($"{watcherTypeName} type is not found");
+                }
+                else
+                    report.AppendInNewLine($"{cellPoint} is out of bounds");
+            }
+            else
+                report.AppendInNewLine($"{npsModID} is not active");
+
+            Find.WindowStack.Add(new Dialog_MessageBox(report.ToString()));
         }
     }
 }
