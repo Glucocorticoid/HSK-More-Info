@@ -85,7 +85,7 @@ namespace MoreInfo
         {
             var reporter = new StringBuilder();
             reporter.AppendInNewLine($"Storyteller: {Find.Storyteller.def.label} \n");
-            reporter.AppendInNewLine($"Difficulty: {Find.Storyteller.difficulty.label} \n");
+            reporter.AppendInNewLine($"Difficulty: {Find.Storyteller.difficultyDef.label} \n");
             var comps = Find.Storyteller.storytellerComps;
             reporter.AppendInNewLine($"Teller has {comps.Count} comps: \n");
             foreach (var comp in comps)
@@ -104,7 +104,7 @@ namespace MoreInfo
         private static void StorytellerFix_GetInfoButton()
         {
                 string teller = Find.Storyteller.def.label;
-                string difficulty = Find.Storyteller.difficulty.label;
+                string difficulty = Find.Storyteller.difficultyDef.label;
                 int queueLength = Find.Storyteller.incidentQueue.Count;
                 string queue = Find.Storyteller.incidentQueue.DebugQueueReadout;
                 Find.WindowStack.Add(new Dialog_MessageBox($"Storyteller: {teller}. \n\nDifficulty: {difficulty}. \n\nIncidents in the queue: {queueLength}. \n\nIncidents: \n\n {queue}"));

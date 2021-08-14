@@ -23,16 +23,16 @@
 		<Compile Include="../Source/*.cs" />
 		
 	 	<!-- Rimworld -->
-	 	<Reference Include="../../../RimWorldWin64_Data/Managed/*.dll">
+	 	<Reference Include="../../_Assemblies_13/*.dll">
 			<Private>False</Private>
 		</Reference>
 
 		<!-- Harmony -->
-		<Reference Include="../../Harmony/Assemblies/0Harmony.dll">
+		<Reference Include="../../_Assemblies_Mods/0Harmony.dll">
 			<Private>False</Private>
 		</Reference>
 
-		<Reference Include="../../CombatExtended/Assemblies/CombatExtended.dll">
+		<Reference Include="../../_Assemblies_Mods/CombatExtended.dll">
 			<Private>False</Private>
 		</Reference>
 

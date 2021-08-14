@@ -56,8 +56,9 @@ namespace MoreInfo
 
         public static float GetMoveSpeed(Pawn pawn)
         {
+            if (!pawn.pather.Moving)     return 0f;
             float movePerTick = 60 / pawn.GetStatValue(StatDefOf.MoveSpeed, false);
-            movePerTick +=  pawn.Map.pathGrid.CalculatedCostAt(pawn.Position, false, pawn.Position);
+            movePerTick += pawn.Map.pathing.For(pawn).pathGrid.CalculatedCostAt(pawn.pather.nextCell, perceivedStatic: false, pawn.Position);
             Building edifice = pawn.Position.GetEdifice(pawn.Map);
             if (edifice != null)
             {
@@ -91,5 +92,5 @@ namespace MoreInfo
             }
             return 60 / movePerTick;
         }
-	}
+	} 
 }
